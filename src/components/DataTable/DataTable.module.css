@@ -1,0 +1,128 @@
+.tableWrap {
+  overflow-x: auto;
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table thead th {
+  background: var(--color-slate-50);
+  color: var(--color-slate-600);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: var(--border-hairline-strong);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sortButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  padding: 0;
+}
+.sortButton:hover {
+  color: var(--color-navy-900);
+}
+
+.sortIcon {
+  font-size: 10px;
+  opacity: 0.5;
+}
+.sortIconActive {
+  opacity: 1;
+  color: var(--color-signal-600);
+}
+
+.row {
+  border-bottom: var(--border-hairline);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+.row:last-child {
+  border-bottom: none;
+}
+.row:hover {
+  background: var(--color-slate-50);
+}
+.row:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-signal-500);
+}
+
+.rowSelected {
+  background: var(--color-signal-50);
+}
+.rowSelected:hover {
+  background: var(--color-signal-100);
+}
+
+/* Severity spine — signature element: a colored margin flag on the left
+   edge of each row, echoing a paper exception report's colored tab. */
+.severityRail {
+  width: 4px;
+  padding: 0 !important;
+}
+.railCritical {
+  background: var(--color-critical-500);
+}
+.railHigh {
+  background: var(--color-high-500);
+}
+.railMedium {
+  background: var(--color-medium-500);
+}
+.railLow {
+  background: var(--color-low-500);
+}
+
+.checkboxCell {
+  width: 40px;
+}
+
+.emptyState {
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  color: var(--color-slate-500);
+}
+
+.emptyTitle {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-navy-900);
+  margin: 0 0 var(--space-2);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.metaText {
+  color: var(--color-slate-500);
+  font-size: var(--text-xs);
+}

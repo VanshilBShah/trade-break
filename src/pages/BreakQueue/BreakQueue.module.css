@@ -1,0 +1,128 @@
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.pageTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-navy-900);
+  margin: 0 0 var(--space-1);
+}
+
+.pageSubtitle {
+  color: var(--color-slate-500);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.summaryStrip {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.summaryCard {
+  background: var(--color-white);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  min-width: 96px;
+  text-align: center;
+}
+
+.summaryValue {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-navy-900);
+  display: block;
+}
+
+.summaryLabel {
+  font-size: var(--text-2xs);
+  color: var(--color-slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 220px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-slate-300);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  background: var(--color-white);
+}
+.searchInput:focus {
+  border-color: var(--color-signal-500);
+}
+
+.filterSelect {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-slate-300);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  background: var(--color-white);
+  color: var(--color-navy-900);
+}
+
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--text-2xs);
+  color: var(--color-slate-500);
+}
+
+.clearButton {
+  font-size: var(--text-xs);
+}
+
+.bulkBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-navy-900);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.bulkText {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+.bulkActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.assignedCell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.unassigned {
+  color: var(--color-slate-400);
+  font-style: italic;
+}
+
+.ageWarning {
+  color: var(--color-critical-600);
+  font-weight: var(--weight-semibold);
+}

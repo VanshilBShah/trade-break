@@ -1,0 +1,160 @@
+/*
+  Design tokens for the Trade Break Resolution Console.
+
+  Direction: dense, quiet, instrument-panel enterprise tool — not a marketing
+  surface. The signature move is the left "rail" of severity color that runs
+  down the spine of the queue table and detail view, borrowed from the way
+  physical trade blotters and exception reports use a colored tab/flag down
+  the margin of a page. Everything else stays disciplined: one accent hue
+  (signal blue) reserved for interactive/focus states only, and a strict
+  4px spacing grid so the dense table reads as intentional, not cramped.
+*/
+
+:root {
+  /* ---- Core neutrals (navy/slate/white per enterprise Ops context) ---- */
+  --color-navy-950: #0b1220;
+  --color-navy-900: #101a2e;
+  --color-navy-800: #16233d;
+  --color-slate-700: #33415c;
+  --color-slate-600: #465372;
+  --color-slate-500: #64748b;
+  --color-slate-400: #8896ab;
+  --color-slate-300: #b3bdcc;
+  --color-slate-200: #d8dee7;
+  --color-slate-100: #eceff4;
+  --color-slate-50: #f6f8fa;
+  --color-white: #ffffff;
+
+  /* ---- Signal accent (interactive / focus / links only) ---- */
+  --color-signal-600: #1d4ed8;
+  --color-signal-500: #2563eb;
+  --color-signal-100: #dbe6fd;
+  --color-signal-50: #eef3fe;
+
+  /* ---- Semantic severity colors ---- */
+  --color-critical-600: #b42318;
+  --color-critical-500: #d92d20;
+  --color-critical-100: #fde3e1;
+  --color-critical-50: #fef4f3;
+
+  --color-high-600: #b54708;
+  --color-high-500: #dc6803;
+  --color-high-100: #fdead1;
+  --color-high-50: #fef6ec;
+
+  --color-medium-600: #a15c07;
+  --color-medium-500: #d4a017;
+  --color-medium-100: #faf0c9;
+  --color-medium-50: #fdf9ea;
+
+  --color-low-600: #17643a;
+  --color-low-500: #17875e;
+  --color-low-100: #d6f0e3;
+  --color-low-50: #eefaf3;
+
+  /* ---- Status colors (workflow state, distinct from severity) ---- */
+  --color-status-new: var(--color-slate-500);
+  --color-status-inprogress: var(--color-signal-600);
+  --color-status-escalated: var(--color-critical-600);
+  --color-status-resolved: var(--color-low-600);
+  --color-status-reopened: #7c2d8e;
+  --color-status-reopened-100: #f2e2f6;
+
+  /* ---- Type scale (system font stack, per brief) ---- */
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: "SF Mono", "Cascadia Code", Consolas, "Roboto Mono", monospace;
+
+  --text-2xs: 0.6875rem;   /* 11px — table meta, timestamps */
+  --text-xs: 0.75rem;      /* 12px — labels, badges */
+  --text-sm: 0.8125rem;    /* 13px — table body, dense UI */
+  --text-base: 0.875rem;   /* 14px — default body */
+  --text-md: 1rem;         /* 16px — section headers */
+  --text-lg: 1.25rem;      /* 20px — panel titles */
+  --text-xl: 1.5rem;       /* 24px — page title */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.45;
+
+  /* ---- Spacing grid (4px base) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ---- Radius / elevation ---- */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --shadow-sm: 0 1px 2px rgba(16, 26, 46, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 26, 46, 0.12);
+  --shadow-lg: 0 12px 32px rgba(16, 26, 46, 0.18);
+
+  --border-hairline: 1px solid var(--color-slate-200);
+  --border-hairline-strong: 1px solid var(--color-slate-300);
+
+  --transition-fast: 120ms ease;
+  --transition-base: 180ms ease;
+
+  --focus-ring: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-signal-500);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  color: var(--color-navy-900);
+  background: var(--color-slate-50);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--color-signal-600);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

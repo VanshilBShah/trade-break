@@ -1,0 +1,56 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.Critical {
+  background: var(--color-critical-50);
+  color: var(--color-critical-600);
+  border-color: var(--color-critical-100);
+}
+.Critical .dot {
+  background: var(--color-critical-500);
+}
+
+.High {
+  background: var(--color-high-50);
+  color: var(--color-high-600);
+  border-color: var(--color-high-100);
+}
+.High .dot {
+  background: var(--color-high-500);
+}
+
+.Medium {
+  background: var(--color-medium-50);
+  color: var(--color-medium-600);
+  border-color: var(--color-medium-100);
+}
+.Medium .dot {
+  background: var(--color-medium-500);
+}
+
+.Low {
+  background: var(--color-low-50);
+  color: var(--color-low-600);
+  border-color: var(--color-low-100);
+}
+.Low .dot {
+  background: var(--color-low-500);
+}

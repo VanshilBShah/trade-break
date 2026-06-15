@@ -1,0 +1,52 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-medium);
+  padding: 2px var(--space-2);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.New {
+  background: var(--color-slate-100);
+  color: var(--color-slate-600);
+  border-color: var(--color-slate-200);
+}
+
+.InProgress {
+  background: var(--color-signal-50);
+  color: var(--color-signal-600);
+  border-color: var(--color-signal-100);
+}
+
+.Escalated {
+  background: var(--color-critical-50);
+  color: var(--color-critical-600);
+  border-color: var(--color-critical-100);
+  font-weight: var(--weight-semibold);
+}
+
+.Resolved {
+  background: var(--color-low-50);
+  color: var(--color-low-600);
+  border-color: var(--color-low-100);
+}
+
+/* Reopened gets a visually distinct treatment (edge case #3): a striped
+   underlay signals "this was resolved once, then reversed" — deliberately
+   different from a flat pill so it can't be confused with any other status
+   at a glance in a dense table. */
+.Reopened {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-status-reopened-100),
+    var(--color-status-reopened-100) 4px,
+    #ffffff 4px,
+    #ffffff 8px
+  );
+  color: var(--color-status-reopened);
+  border-color: #dcb8e5;
+  font-weight: var(--weight-semibold);
+}
